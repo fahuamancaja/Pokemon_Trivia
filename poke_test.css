@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'pktitle';
+    src: url('fonts/pktitle-webfont.woff2') format('woff2'),
+         url('fonts/pktitle-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pokemonfont';
+    src: url('fonts/pokemonsolid-webfont.woff2') format('woff2'),
+         url('fonts/pokemonsolid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'digitalpm';
+    src: url('fonts/pokemongba-webfont.woff2') format('woff2'),
+         url('fonts/pokemongba-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (min-width:320px) and (max-width: 812px) and (orientation: landscape){
+    .test_text {
+    font : 1em "pokemonfont", sans-serif;
+    }
+    .label {
+    font : 1em "pokemonfont", sans-serif;
+    color: ffcb05;
+            text-shadow: 
+        -3px -3px 1px #3466af,
+        3px -3px 1px #3466af,
+        -3px 3px 1px #3466af,
+        3px 3px 1px #3466af,
+        -8px 8px 1px rgba(0, 0, 0, 0.5);
+
+}
+.input {
+
+    border  : none;
+    padding : 2px 2px 2px 2px;
+    margin  : 0;
+    width   : 140px;
+    opacity : .8;
+    text-align: left;
+    font    : 1em/1em "digitalpm", sans-serif;
+
+    background: rgba(0,0,0,.1);
+    }
+}
+fieldset    {
+        border:none;
+}
+
+h1 {
+    position: fixed;
+    left : 12%;
+    top  : 67%;
+
+    font : 2em "pokemonfont", sans-serif;
+    color: ffcb05;
+
+    text-shadow: 
+        -3px -3px 1px #3466af,
+        3px -3px 1px #3466af,
+        -3px 3px 1px #3466af,
+        3px 3px 1px #3466af,
+        -8px 8px 1px rgba(0, 0, 0, 0.5);
+}        
+
+#pokemongb {
+    position: fixed;
+    left : 12%;
+    top  : 78%;
+}  
+
+label {
+    font : 2em "pokemonfont", sans-serif;
+    color: ffcb05;
+            text-shadow: 
+        -3px -3px 1px #3466af,
+        3px -3px 1px #3466af,
+        -3px 3px 1px #3466af,
+        3px 3px 1px #3466af,
+        -8px 8px 1px rgba(0, 0, 0, 0.5);
+
+}
+input {
+
+    border  : none;
+    padding : 5px 5px 5px 5px;
+    margin  : 0;
+    width   : 240px;
+    opacity : .8;
+    text-align: left;
+    font    : 1.5em/1.5em "digitalpm", sans-serif;
+
+    background: rgba(0,0,0,.1);
+    }
+/*input:focus, textarea:focus {
+    background   : rgba(0,0,0,.1);
+    border-radius: 5px;
+    outline      : none;
+}*/
+
+.buttons{
+    position: fixed;
+    width: 5%;
+    max-width: 400px;
+    top: 87%;
+    left: 22%;
+}
+
+.buttons img{
+    width: 100%;
+    height: auto;
+}
+
+.button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0);
+    color: rgba(0,0,0,0);
+    font-size: 10px;
+    padding: 20px 10px;
+
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: middle;
+}
+.buttons .button:hover {
+}

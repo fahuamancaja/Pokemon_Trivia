@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'pktitle';
+    src: url('fonts/pktitle-webfont.woff2') format('woff2'),
+         url('fonts/pktitle-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pokemonfont';
+    src: url('fonts/pokemonsolid-webfont.woff2') format('woff2'),
+         url('fonts/pokemonsolid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'digitalpm';
+    src: url('fonts/pokemongba-webfont.woff2') format('woff2'),
+         url('fonts/pokemongba-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (min-width:320px) and (max-width: 812px) and (orientation: landscape){
+    html body legend .pktitle {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width:  100vh;
+        overflow-x: hidden;
+        position:   absolute;
+        top: 100%;
+        left:   0;
+    }
+    .pktitle {
+    font : 3em "pktitle", sans-serif;
+    }
+    
+}
+body {
+
+    margin : 0;
+
+    background: #FFF url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+legend {
+    position : fixed;
+    left : 10%;
+    top  : 1%;
+
+    text-align: center;
+    font : 5em "pktitle", sans-serif;
+    color: ffcb05;
+    text-shadow: 
+        -4px -4px 1px #3466af,
+        4px -4px 1px #3466af,
+        -4px 4px 1px #3466af,
+        4px 4px 1px #3466af,
+        -8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+.orientmessage{
+    position:fixed;
+    font : .8em sans-serif;
+    left : 65%;
+    top  : 1%;
+}
+.pokemon_shadow{
+    position: fixed;
+    left : 14%;
+    top  : 12%;
+    width: 25%;
+    height: auto;
+    filter: brightness(0%);
+    }
+
+.invbadge {
+    position: fixed;
+    left : 82%;
+    top  : 5%;
+    width: 15%;
+    height: auto;
+}     
+.badge {
+    position: fixed;
+    left : 82%;
+    top  : 5%;
+    width: 15%;
+    height: auto;
+}
+.pokemon_image{
+    position: fixed;
+    left : 14%;
+    top  : 12%;
+    width: 25%;
+    height: auto;
+
+}

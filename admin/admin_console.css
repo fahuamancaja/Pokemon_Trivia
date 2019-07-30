@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    padding:    0;
+    background: url(/images/icons/admin_menu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+.regbox1{
+    width: 320px;
+    height: 220px;
+    background: rgba(0,0,0,80%);
+    color: #fff;
+    top: 25%;
+    left: 18%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 40px 30px;
+}
+.regbox2{
+    width: 320px;
+    height: 220px;
+    background: rgba(0,0,0,80%);
+    color: #fff;
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 40px 30px;
+}
+.regbox3{
+    width: 320px;
+    height: 220px;
+    background: rgba(0,0,0,80%);
+    color: #fff;
+    top: 25%;
+    left: 82%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+.regbox4{
+    width: 320px;
+    height: 320px;
+    background: rgba(0,0,0,80%);
+    color: #fff;
+    top: 71.5%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top:-50px;
+    left: calc(50% - 50px);
+}
+h1{
+    margin: 0;
+    padding: 0 0 8px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    background: rgba(0,0,0,80%);
+}
+.regbox1 p, .regbox2 p, .regbox3 p, .regbox4 p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.regbox1 input, .regbox2 input, .regbox3 input, .regbox4 input{
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+.regbox1 input[type="text"], .regbox2 input[type="text"], .regbox3 input[type="text"], .regbox4 input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.regbox1 input[type="submit"], .regbox2 input[type="submit"], .regbox3 input[type="submit"], .regbox4 input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #30af0b;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.logininbox input[type"submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.regbox1 a, .regbox2 a, .regbox3 a, .regbox4 a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}

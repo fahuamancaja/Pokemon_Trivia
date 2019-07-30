@@ -15,7 +15,7 @@
 
     //Check is there is a current session, if there is, then go to poke_test.php
 	if(isset($_SESSION['user'])) {
-		header('Location: poke_test.php');
+		header('Location: admin_console.php');
 	}
 
     //Check if the user exists based on input

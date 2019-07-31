@@ -1,9 +1,9 @@
 <?php
 class Connections {
-    public $username;
-    public $password;
-    public $id;
-    public $point;
+    protected $username;
+    protected $password;
+    protected $id;
+    protected $point;
     
     protected function root_con() {
         require 'vendor/autoload.php';
@@ -11,7 +11,21 @@ class Connections {
         $db = $client->poke;
         return $db;
     }
+}
     
+class subConnections extends Connections {
+    public function return_user($user){
+        $this->username = $user;
+    }
+    public function return_id($i_user){
+        $this->id = $i_user;
+    }
+    public function return_p($p_point){
+        $this->point = $p_point;
+    }
+    public function return_pwd($pwd){
+        $this->point = $pwd;
+    }
     public function pull_user(){
         $result = $this->root_con()->poke_users->find([
             'user'=>$this->username,

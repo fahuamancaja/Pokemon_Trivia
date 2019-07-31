@@ -4,18 +4,25 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once('connections.php');
+require_once('connection_methods.php');
 
-$r_user = ($_POST['r_user']);
-insert_point($r_user);
+$i_user = ($_POST['point_user']);
+$p_point = ($_POST['point']);
+
+$push_point = new subConnections();
+$push_point->return_id($i_user);
+$push_point->return_p($p_point);
+
+$add_point = $push_point->insert_point();
 
 ?>
 <html>
 <head>
-    <title>Removed Points</title>
+    <title>Points Altered</title>
 </head>
 
     <body>
-    User's point have been removed
+    User's point have been altered. <br/>
+        <?php var_dump($add_point) ;?><br/>
     </body>
 </html>

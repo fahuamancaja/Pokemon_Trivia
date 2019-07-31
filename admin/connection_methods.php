@@ -24,7 +24,7 @@ class subConnections extends Connections {
         $this->point = $p_point;
     }
     public function return_pwd($pwd){
-        $this->point = $pwd;
+        $this->password = $pwd;
     }
     public function pull_user(){
         $result = $this->root_con()->poke_users->find([

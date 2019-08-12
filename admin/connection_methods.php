@@ -14,18 +14,14 @@ class Connections {
 }
     
 class subConnections extends Connections {
-    public function return_user($user){
-        $this->username = $user;
+
+    public function __construct($args=[]) {
+        $this->username = $args['username'] ?? NULL;
+        $this->password = $args['password'] ?? NULL;
+        $this->id = $args['id'] ?? NULL;
+        $this->point = $args['point'] ?? NULL;
     }
-    public function return_id($i_user){
-        $this->id = $i_user;
-    }
-    public function return_p($p_point){
-        $this->point = $p_point;
-    }
-    public function return_pwd($pwd){
-        $this->password = $pwd;
-    }
+    
     public function pull_user(){
         $result = $this->root_con()->poke_users->find([
             'user'=>$this->username,

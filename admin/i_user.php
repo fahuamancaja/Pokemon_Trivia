@@ -7,15 +7,11 @@ error_reporting(E_ALL);
 require_once('connection_methods.php');
 
 $user = ($_POST['user']);
-$pwd = ($_POST['password']);
+$pwd = hash('sha256' , $_POST['password']);
 $p_point = ($_POST['point']);
 
 //Insert new user -> insert_new_user
-$push_user = new subConnections();
-
-$push_user->return_user($user);
-$push_user->return_pwd($pwd);
-$push_user->return_p($p_point);
+$push_user = new subConnections(['username'=>$user , 'password'=>$pwd , 'point'=>$p_point]);
 
 $new_user = $push_user->insert_new_user();
 

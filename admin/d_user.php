@@ -9,8 +9,7 @@ require_once('connection_methods.php');
 $i_user = ($_POST['delete_user']);
 
 //Delete user ->delete_user
-$delete_user = new subConnections();
-$delete_user->return_id($i_user);
+$delete_user = new subConnections(['id'=>$i_user]);
 
 $d_user = $delete_user->delete_user();
 

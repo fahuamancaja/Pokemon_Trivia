@@ -9,9 +9,8 @@ require_once('connection_methods.php');
 $user = ($_POST['user_search']);
 
 //Searching users by username -> function pull_user
-$user_info = new subConnections();
-$user_info->return_user($user);
-//$user_info->username = $username;
+$user_info = new subConnections(['username'=>$user]);
+
 $show_users = $user_info->pull_user();
 
 ?>

@@ -1,10 +1,13 @@
 <?php
+//Created a class with subclasses to protect and extend Connections 
 class Connections {
+    //Variables created for class and subclass
     protected $username;
     protected $password;
     protected $id;
     protected $point;
     
+    //function to access database when needed
     protected function root_con() {
         require 'vendor/autoload.php';
         $client = new MongoDB\Client("mongodb://localhost:27017");
@@ -12,9 +15,10 @@ class Connections {
         return $db;
     }
 }
-    
+//All sub classes that will request or change data
 class subConnections extends Connections {
-
+    
+    //Every time an instance is called the values will be passed in and assigned to class variables
     public function __construct($args=[]) {
         $this->username = $args['username'] ?? NULL;
         $this->password = $args['password'] ?? NULL;
@@ -22,6 +26,7 @@ class subConnections extends Connections {
         $this->point = $args['point'] ?? NULL;
     }
     
+    //pulls user info from mongo
     public function pull_user(){
         $result = $this->root_con()->poke_users->find([
             'user'=>$this->username,
@@ -45,6 +50,8 @@ class subConnections extends Connections {
         }
         return $show_users;
     }
+    
+    //pulls only the number of points for user
     public function pull_point(){
         $pointfdb = $this->root_con()->poke_users->findOne(
           [
@@ -60,6 +67,8 @@ class subConnections extends Connections {
         $info = $pointfdb->point;
         return $info;    
     }
+    
+    //Places point value for specific user
     public function insert_point(){    
         $insertPoint = $this->root_con()->poke_users->updateOne([
             '_id' => new MongoDB\BSON\ObjectID("$this->id"),
@@ -73,6 +82,8 @@ class subConnections extends Connections {
         );
         return $insertPoint;
     }
+    
+    //Creates a new user
     public function insert_new_user(){
         $result = $this->root_con()->poke_users->insertOne([
         'user'=>$this->username, 
@@ -81,6 +92,8 @@ class subConnections extends Connections {
         ]);
         return $result;
     }
+    
+    //Removes user completely from the database
     public function delete_user(){
         $result = $this->root_con()->poke_users->findOneAndDelete(
           [

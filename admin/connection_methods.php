@@ -18,7 +18,7 @@ class Connections {
 //All sub classes that will request or change data
 class subConnections extends Connections {
     
-    //Every time an instance is called the values will be passed in and assigned to class variables
+    //Every time an instance is created the values will be passed in and assigned to class variables
     public function __construct($args=[]) {
         $this->username = $args['username'] ?? NULL;
         $this->password = $args['password'] ?? NULL;
